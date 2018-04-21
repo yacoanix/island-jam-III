@@ -57,6 +57,8 @@
      <Compile Include="Assets\DisparosGuays.cs" />
      <Compile Include="Assets\Shoot.cs" />
      <Compile Include="Assets\Spawner.cs" />
+     <Compile Include="Assets\TextureScroller.cs" />
+     <Compile Include="Assets\vida.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
