@@ -33,22 +33,24 @@ public class BackgroundScroll : MonoBehaviour {
 
 		lastMedia = media;
 
+
+
 	}
 
-	float GetHorzExtent() {
+	public float GetHorzExtent() {
 		return Camera.main.orthographicSize * Screen.width / Screen.height;
 	}
 
-	Vector2 cameraBounds() {
+	public Vector2 CameraBounds() {
 		float horzExtent = GetHorzExtent();
 		return new Vector2(mainCamera.position.x - horzExtent, mainCamera.position.x + horzExtent);
 	}
 
-	bool PlayerNearTheFrontBound(Transform player) {
-		return player.position.x + offset > cameraBounds().y;
+	public bool PlayerNearTheFrontBound(Transform player) {
+		return player.position.x + offset > CameraBounds().y;
 	}
 
-	void SetCameraPosition(float hPosition) {
+	public void SetCameraPosition(float hPosition) {
 		float newX = Mathf.Lerp(mainCamera.position.x, hPosition, Time.deltaTime * speed);
 		mainCamera.position = new Vector3(newX, mainCamera.position.y, mainCamera.position.z);
 	}
