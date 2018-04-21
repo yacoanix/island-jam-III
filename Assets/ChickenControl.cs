@@ -9,7 +9,7 @@ public class ChickenControl : MonoBehaviour {
 	[SerializeField] private KeyCode down = KeyCode.S;
 	[SerializeField] private KeyCode left = KeyCode.A;
 	[SerializeField] private KeyCode right = KeyCode.D;
-	public bool controlActived = true;
+	[HideInInspector] public bool controlActive = false;
 
 	private ChickenChair chair;
 
@@ -26,7 +26,7 @@ public class ChickenControl : MonoBehaviour {
 		if(Input.GetKey(right)) move += Vector2.right;
 		if(Input.GetKey(left)) move += Vector2.left;
 
-		if(controlActived)
+		if(controlActive)
 			chair.Move(move);
 	}
 }
