@@ -11,7 +11,7 @@ public class BackgroundScroll : MonoBehaviour {
 	public float speed = 3;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		mainCamera = Camera.main.transform;
 	}
 	

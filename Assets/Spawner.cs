@@ -29,9 +29,11 @@ public class Spawner : MonoBehaviour {
 
 	public GameObject Spawn(GameObject spawnable) {
 		Bounds bound = box.bounds;
-		Vector2 randomPoint = new Vector2(
+		Vector3 randomPoint = new Vector3(
 		 Random.Range(bound.min.x, bound.max.x),
-		 Random.Range(bound.min.y, bound.max.y));
+		 Random.Range(bound.min.y, bound.max.y),
+		 spawnable.transform.position.z
+		);
 		
 		return Instantiate(spawnable, randomPoint, Quaternion.identity);
 	}

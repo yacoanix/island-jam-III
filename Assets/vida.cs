@@ -8,6 +8,7 @@ public class vida : MonoBehaviour {
     private Vector2 initialSize;
     AudioSource playerAudio;
 
+    public AudioClip[] cackles;
 
     void Awake(){
         
@@ -15,7 +16,7 @@ public class vida : MonoBehaviour {
 
 	void Start () {
 		initialSize = ui.sizeDelta;
-
+        playerAudio = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -23,9 +24,14 @@ public class vida : MonoBehaviour {
 	}
 
     public void TakeDamage(float damage) {
-        if(playerAudio)
-            playerAudio.Play();
+        if(playerAudio != null && !playerAudio.isPlaying)
+            PlayCackle();
         vidaPollo = Mathf.Max(0, vidaPollo - damage);
+    }
+
+    public void PlayCackle() {
+        playerAudio.clip = cackles[Random.Range(0, cackles.Length)];
+        playerAudio.Play();
     }
 
 }

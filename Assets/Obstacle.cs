@@ -17,7 +17,6 @@ public class Obstacle : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		vida playerLife = collision.gameObject.GetComponent<vida>();
 		if(playerLife != null) {
-			Debug.Log("Choca");
 			playerLife.TakeDamage(damage);
 			Destroy(gameObject);
 		}
@@ -26,7 +25,6 @@ public class Obstacle : MonoBehaviour {
 	void Update(){
 		if(scroll.CameraBounds().x > transform.position.x - offset) {
 			Destroy(gameObject);
-			Debug.Log("Tengo miedo");
 		}
 	}
 }
