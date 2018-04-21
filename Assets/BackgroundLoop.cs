@@ -12,7 +12,7 @@ public class BackgroundLoop : MonoBehaviour {
 		backgrounds = new List<Transform>(GetComponentsInChildren<Transform>());
 		backgrounds.Remove(transform);
 		scroll = Camera.main.GetComponent<BackgroundScroll>();
-	}
+	}	
 	
 	// Update is called once per frame
 	void Update () {

@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class vida : MonoBehaviour {
-       public int vidaPollo = 100;
-       public int vidaPolloAct;
-       public RectTransform ui;
-       private Vector2 initialSize;
-       AudioSource playerAudio;
+    public float vidaPollo = 100;
+    public RectTransform ui;
+    private Vector2 initialSize;
+    AudioSource playerAudio;
 
-       bool damaged;
 
     void Awake(){
-        playerAudio.GetComponent<AudioSource>();
-        vidaPolloAct=vidaPolloAct;
+        
     }
 
 	void Start () {
@@ -21,9 +18,13 @@ public class vida : MonoBehaviour {
 
 	}
 
-
-
 	void Update () {
-		ui.sizeDelta = new Vector2(initialSize.x * vidaPolloAct / 100, initialSize.y);
+		ui.sizeDelta = new Vector2(initialSize.x * vidaPollo / 100, initialSize.y);
 	}
+
+    public void TakeDamage(float damage) {
+        playerAudio.Play();
+        vidaPollo = Mathf.Max(0, vidaPollo - damage);
+    }
+
 }
