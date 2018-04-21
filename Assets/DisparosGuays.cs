@@ -19,7 +19,6 @@ public class DisparosGuays : MonoBehaviour {
         for (int i = 0; i< municion;i++){
             GameObject Ammo = (GameObject) Instantiate (AmmoPrefab, transform.position, Quaternion.identity);
             Transform Tammo = Ammo.transform;
-            Tammo.parent = transform;
             ammoQueue.Enqueue (Tammo);
             Ammo.SetActive (false);
             AmmoArray[i] = Ammo;
