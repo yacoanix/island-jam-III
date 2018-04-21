@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 89618607}
   - component: {fileID: 89618608}
   - component: {fileID: 89618609}
+  - component: {fileID: 89618610}
   m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
@@ -279,6 +280,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaPollo: 100
   ui: {fileID: 0}
+--- !u!95 &89618610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89618602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8933ca145fbd5b4ca749bde8f53fc75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &230332944
 GameObject:
   m_ObjectHideFlags: 0
