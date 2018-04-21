@@ -1,0 +1,55 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BackgroundScroll : MonoBehaviour {
+
+	public Transform[] players;
+	public Transform mainCamera;
+	private float lastMedia = 0;
+	public float offset = 1; 
+	public float speed = 3;
+
+	// Use this for initialization
+	void Start () {
+		mainCamera = Camera.main.transform;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+		float media = (players[0].position.x + players[1].position.x) / 2.0f;
+		
+		if(PlayerNearTheFrontBound(players[0]) || PlayerNearTheFrontBound(players[1])) {
+			float maxPlayer = Mathf.Max(players[0].position.x, players[1].position.x);
+			mainCamera.position = new Vector3(
+				maxPlayer - GetHorzExtent() + offset, 
+				mainCamera.position.y, 
+				mainCamera.position.z);
+			
+		}else if(lastMedia < media) {
+			SetCameraPosition(media);
+		}
+
+		lastMedia = media;
+
+	}
+
+	float GetHorzExtent() {
+		return Camera.main.orthographicSize * Screen.width / Screen.height;
+	}
+
+	Vector2 cameraBounds() {
+		float horzExtent = GetHorzExtent();
+		return new Vector2(mainCamera.position.x - horzExtent, mainCamera.position.x + horzExtent);
+	}
+
+	bool PlayerNearTheFrontBound(Transform player) {
+		return player.position.x + offset > cameraBounds().y;
+	}
+
+	void SetCameraPosition(float hPosition) {
+		float newX = Mathf.Lerp(mainCamera.position.x, hPosition, Time.deltaTime * speed);
+		mainCamera.position = new Vector3(newX, mainCamera.position.y, mainCamera.position.z);
+	}
+}
