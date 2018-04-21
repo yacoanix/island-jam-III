@@ -22,16 +22,20 @@ public class BackgroundScroll : MonoBehaviour {
 		
 		if(PlayerNearTheFrontBound(players[0]) || PlayerNearTheFrontBound(players[1])) {
 			float maxPlayer = Mathf.Max(players[0].position.x, players[1].position.x);
-			mainCamera.position = new Vector3(
+			Vector3 newPosition = new Vector3(
 				maxPlayer - GetHorzExtent() + offset, 
 				mainCamera.position.y, 
 				mainCamera.position.z);
+
+			if(mainCamera.position.x < newPosition.x) {
+				mainCamera.position = newPosition;
+			}
 			
-		}else if(lastMedia < media) {
+		}else if(mainCamera.position.x < media) {
 			SetCameraPosition(media);
 		}
 
-		lastMedia = media;
+		
 
 
 

@@ -23,7 +23,8 @@ public class vida : MonoBehaviour {
 	}
 
     public void TakeDamage(float damage) {
-        playerAudio.Play();
+        if(playerAudio)
+            playerAudio.Play();
         vidaPollo = Mathf.Max(0, vidaPollo - damage);
     }
 

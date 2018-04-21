@@ -27,7 +27,6 @@ public class BackgroundLoop : MonoBehaviour {
 	}
 
 	bool BackgroundIsOutsideCamera(Transform background){
-		Debug.Log(background.name);
 		float bgRightSide = background.GetComponent<SpriteRenderer>().bounds.max.x;
 		return bgRightSide < scroll.CameraBounds().x;
 	}
