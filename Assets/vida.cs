@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class vida : MonoBehaviour {
        public int vidaPollo = 100;
+       public int vidaPolloAct;
        public RectTransform ui;
        private Vector2 initialSize;
+       AudioSource playerAudio;
 
-	// Use this for initialization
+       bool damaged;
+
+    void Awake(){
+        playerAudio.GetComponent<AudioSource>();
+        vidaPolloAct=vidaPolloAct;
+    }
+
 	void Start () {
 		initialSize = ui.sizeDelta;
+
 	}
-	
-	// Update is called once per frame
+
+
+
 	void Update () {
-		ui.sizeDelta = new Vector2(initialSize.x * vidaPollo / 100, initialSize.y);
+		ui.sizeDelta = new Vector2(initialSize.x * vidaPolloAct / 100, initialSize.y);
 	}
 }
