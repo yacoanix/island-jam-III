@@ -5,10 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(ChickenChair))]
 public class ChickenControl : MonoBehaviour {
 
-	[SerializeField] private KeyCode up;
-	[SerializeField] private KeyCode down;
-	[SerializeField] private KeyCode left;
-	[SerializeField] private KeyCode right;
+	[SerializeField] private KeyCode up = KeyCode.W;
+	[SerializeField] private KeyCode down = KeyCode.S;
+	[SerializeField] private KeyCode left = KeyCode.A;
+	[SerializeField] private KeyCode right = KeyCode.D;
+	public bool controlActived = true;
 
 	private ChickenChair chair;
 
@@ -18,13 +19,14 @@ public class ChickenControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Vector2 move = Vector3.zero;
 		if(Input.GetKey(up)) move += Vector2.up;
 		if(Input.GetKey(down)) move += Vector2.down;
 		if(Input.GetKey(right)) move += Vector2.right;
 		if(Input.GetKey(left)) move += Vector2.left;
 
-		chair.Move(move);
+		if(controlActived)
+			chair.Move(move);
 	}
 }

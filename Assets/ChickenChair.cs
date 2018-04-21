@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChickenChair : MonoBehaviour {
 
 	Rigidbody2D rb;
-	[SerializeField] Vector2 speed = new Vector2(30, 10);
+	[SerializeField] Vector2 speed = new Vector2(180, 60);
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +19,6 @@ public class ChickenChair : MonoBehaviour {
 	}
 
 	public void Move(Vector2 movement) {
-		rb.velocity = Vector2.Scale(movement, speed);
+		rb.velocity = Vector2.Scale(movement, speed * Time.deltaTime);
 	}
 }
