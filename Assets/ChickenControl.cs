@@ -20,10 +20,10 @@ public class ChickenControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector2 move = Vector3.zero;
-		if(Input.GetKeyDown(up)) move += Vector2.up;
-		if(Input.GetKeyDown(down)) move += Vector2.down;
-		if(Input.GetKeyDown(right)) move += Vector2.right;
-		if(Input.GetKeyDown(left)) move += Vector2.left;
+		if(Input.GetKey(up)) move += Vector2.up;
+		if(Input.GetKey(down)) move += Vector2.down;
+		if(Input.GetKey(right)) move += Vector2.right;
+		if(Input.GetKey(left)) move += Vector2.left;
 
 		chair.Move(move);
 	}
