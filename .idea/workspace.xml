@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fd60b55f-2554-4121-a04e-8dce43d3b850" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AmmoMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AmmoMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DisparosGuays.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DisparosGuays.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Sprite (3).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Sprite (3).prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -137,12 +136,12 @@
       <updated>1524306073979</updated>
       <workItem from="1524306076323" duration="120000" />
       <workItem from="1524306255175" duration="340000" />
-      <workItem from="1524306633495" duration="6090000" />
+      <workItem from="1524306633495" duration="7293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6550000" />
+    <option name="totallyTimeSpent" value="7753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
