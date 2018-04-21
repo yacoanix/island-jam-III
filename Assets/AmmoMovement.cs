@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class AmmoMovement : MonoBehaviour {
 
-    public float Speed = 4f;
-    public float TimeToDie = 10f;
+    public float Speed = 1f;
+    public float TimeToDie = 5f;
 
 
 	void Start () {
-		
+		StartCoroutine(Callback());
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		transform.position += transform.right * Speed * Time.deltaTime;
-		Invoke ("Destroy", TimeToDie);
 	}
 
-	public void Destroy(){
-	    transform.position = transform.parent.position;
-	    gameObject.SetActive (false);
-	}
+    IEnumerator Callback() {
+        yield return new WaitForSeconds(TimeToDie);
+        gameObject.SetActive(false);
+    }
+
 }

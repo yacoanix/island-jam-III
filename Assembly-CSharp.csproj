@@ -52,8 +52,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AmmoMovement.cs" />
+     <Compile Include="Assets\ChickenChair.cs" />
+     <Compile Include="Assets\ChickenControl.cs" />
      <Compile Include="Assets\DisparosGuays.cs" />
      <Compile Include="Assets\Shoot.cs" />
+     <Compile Include="Assets\Spawner.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/opt/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
