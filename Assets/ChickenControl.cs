@@ -18,7 +18,7 @@ public class ChickenControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Vector2 move = Vector3.zero;
 		if(Input.GetKey(up)) move += Vector2.up;
 		if(Input.GetKey(down)) move += Vector2.down;
