@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[RequireComponent(typeof(ChickenChair))]
 public class ChickenControl : MonoBehaviour {
 
 	[SerializeField] private KeyCode up;
