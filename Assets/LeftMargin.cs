@@ -39,4 +39,11 @@ public class LeftMargin : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerStay2D(Collider2D other) {
+		vida playerLife = other.GetComponent<vida>();
+		if(playerLife != null) {
+			playerLife.TakeDamage(damagePerSecond * Time.deltaTime);
+		}
+	}
+
 }

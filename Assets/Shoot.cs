@@ -17,7 +17,8 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (shootKey) && CanFire){
 		    foreach (Transform t in Lanzadores){
-		        DisparosGuays.SpawnAmmo (t.position,t.rotation);
+				PlayShotSound(t);
+		        GetComponent<DisparosGuays>().SpawnAmmo (t.position,t.rotation);
 		    }
 		    CanFire = false;
 		        Invoke ("Reload",TiempoDeDisparos);
@@ -27,4 +28,10 @@ public class Shoot : MonoBehaviour {
 	public void Reload(){
 	    CanFire = true;
 	}
+
+	
+    private void PlayShotSound(Transform lanzador) {
+		lanzador.GetComponent<AudioSource>().Stop();
+		lanzador.GetComponent<AudioSource>().Play();
+    }
 }

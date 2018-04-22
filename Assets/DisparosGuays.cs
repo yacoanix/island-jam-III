@@ -30,15 +30,16 @@ public class DisparosGuays : MonoBehaviour {
 		
 	}
 
-    public static Transform SpawnAmmo (Vector3 position, Quaternion Rotation)
+    public Transform SpawnAmmo (Vector3 position, Quaternion Rotation)
     {
-        Transform Ammo = ammospawner.ammoQueue.Dequeue ();
+        Transform Ammo = ammoQueue.Dequeue ();
         Ammo.gameObject.SetActive (true);
         Ammo.position = position;
         Ammo.rotation = Rotation;
-        ammospawner.ammoQueue.Enqueue (Ammo);
+        ammoQueue.Enqueue (Ammo);
 
         return Ammo;
     }
+
 
 }

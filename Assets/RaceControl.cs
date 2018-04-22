@@ -22,7 +22,8 @@ public class RaceControl : MonoBehaviour {
 	IEnumerator RaceStart() {
 		animation.Play();
 		yield return new WaitForSeconds(animation.clip.length);
-		Debug.Log("Oli");	
+
+		Camera.main.GetComponent<CameraMove>().Run(true);	
 		StartPlayer(players[0]);
 		StartPlayer(players[1]);
 	}
@@ -34,6 +35,21 @@ public class RaceControl : MonoBehaviour {
 
 	public void PlayerDies(GameObject player) {
 		player.GetComponent<Animator>().SetBool("Dying", true);
+		player.GetComponent<ChickenControl>().controlActive = false;
+		player.GetComponent<BoxCollider2D>().enabled = false;
+		player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
+		fisnished = true;
+
+		GameOver(player.name == "player2");
+
+	}
+
+
+	bool fisnished = false;
+
+	public void GameOver(bool chickenHawkingsWin) {
+
 	}
 
 }

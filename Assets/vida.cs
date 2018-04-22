@@ -24,9 +24,16 @@ public class vida : MonoBehaviour {
 	}
 
     public void TakeDamage(float damage) {
+        if(damage == 0) 
+            return;
+            
         if(playerAudio != null && !playerAudio.isPlaying)
             PlayCackle();
         vidaPollo = Mathf.Max(0, vidaPollo - damage);
+
+        if(vidaPollo == 0) {
+            RaceControl.main.PlayerDies(gameObject);
+        }
     }
 
     public void PlayCackle() {
