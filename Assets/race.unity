@@ -247,11 +247,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4791470281266560, guid: c415c1e1ec48da84d9304b669a143031, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.89
@@ -284,55 +279,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1016027074656492, guid: c415c1e1ec48da84d9304b669a143031, type: 2}
-      propertyPath: m_Name
-      value: player1
-      objectReference: {fileID: 0}
     - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
         type: 2}
       propertyPath: ui
       value: 
       objectReference: {fileID: 1820899946}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6ba34c75d6f64834d873e4f29b95d139, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 66c391e9f3d6c454a9f6b55b39797f81, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8db2355a74da52f43bc06a4d2296840b, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 92ab3b6215cc6a944bbc00b08238a14f, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: a895b224b885dd14b9ed33682b1aff9d, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2d9999054eeadbe408e51d32eb17a258, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: 082a20353591735419ee2c1b145c9f08, type: 3}
-    - target: {fileID: 114310502192107046, guid: c415c1e1ec48da84d9304b669a143031,
-        type: 2}
-      propertyPath: cackles.Array.data[7]
-      value: 
-      objectReference: {fileID: 8300000, guid: fbf9e2691fd07144facc83525fff14b5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c415c1e1ec48da84d9304b669a143031, type: 2}
   m_IsPrefabAsset: 0
@@ -1636,11 +1587,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4502357779683528, guid: e2f8df04f02a2c04287d3363aa975880, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.9
@@ -1678,46 +1624,6 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 2065365576}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 18b6767c78175914b9f35054310b2686, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 086ad6957b5de90488df3d49972062e5, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 203ef8e57f67091458aa5358bf669b00, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 74cbe883d6ef66f4caecc460eec8a05b, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: d553da33d9032ae4ea86552d3074e895, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 044bc1ddf4dc96746a7943a7ca804123, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: 42aa3eccbf8991349b46667e64c037b5, type: 3}
-    - target: {fileID: 114889775410085352, guid: e2f8df04f02a2c04287d3363aa975880,
-        type: 2}
-      propertyPath: cackles.Array.data[7]
-      value: 
-      objectReference: {fileID: 8300000, guid: 949db5f51e42fbe409f040da0fc61411, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f8df04f02a2c04287d3363aa975880, type: 2}
   m_IsPrefabAsset: 0

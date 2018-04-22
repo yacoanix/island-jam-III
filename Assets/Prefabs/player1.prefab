@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4069720619393984}
+  - component: {fileID: 82703606987756056}
   m_Layer: 0
   m_Name: LanzadorHawkings
   m_TagString: Untagged
@@ -123,6 +124,101 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0943198, y: 1.1726542}
   m_EdgeRadius: 0
+--- !u!82 &82703606987756056
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330700305988412}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &82782938453163208
 AudioSource:
   m_ObjectHideFlags: 1
@@ -263,7 +359,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaPollo: 100
   ui: {fileID: 0}
-  cackles: []
+  cackles:
+  - {fileID: 8300000, guid: 6ba34c75d6f64834d873e4f29b95d139, type: 3}
+  - {fileID: 8300000, guid: 66c391e9f3d6c454a9f6b55b39797f81, type: 3}
+  - {fileID: 8300000, guid: 8db2355a74da52f43bc06a4d2296840b, type: 3}
+  - {fileID: 8300000, guid: 92ab3b6215cc6a944bbc00b08238a14f, type: 3}
+  - {fileID: 8300000, guid: a895b224b885dd14b9ed33682b1aff9d, type: 3}
+  - {fileID: 8300000, guid: 2d9999054eeadbe408e51d32eb17a258, type: 3}
+  - {fileID: 8300000, guid: 082a20353591735419ee2c1b145c9f08, type: 3}
+  - {fileID: 8300000, guid: fbf9e2691fd07144facc83525fff14b5, type: 3}
 --- !u!114 &114742628641370492
 MonoBehaviour:
   m_ObjectHideFlags: 1
