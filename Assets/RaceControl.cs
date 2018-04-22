@@ -1,12 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaceControl : MonoBehaviour {
 
-	public Animation animation;
+	public Animation startAnimation;
+	public Animation winAnimation;
 	public GameObject[] players;
 	public static RaceControl main;
+
+	public GameObject loserImg;
+	public GameObject winnerImg;
+	public GameObject textFinish;
+
+	public Sprite[] loserSprites;
+	public Sprite[] winnerSprites;
+
+	public float timeOut = 3.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,14 +25,9 @@ public class RaceControl : MonoBehaviour {
 		StartCoroutine(RaceStart());
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	IEnumerator RaceStart() {
-		animation.Play();
-		yield return new WaitForSeconds(animation.clip.length);
+		startAnimation.Play();
+		yield return new WaitForSeconds(startAnimation.clip.length);
 
 		Camera.main.GetComponent<CameraMove>().Run(true);	
 		StartPlayer(players[0]);
@@ -38,10 +44,11 @@ public class RaceControl : MonoBehaviour {
 		player.GetComponent<ChickenControl>().controlActive = false;
 		player.GetComponent<BoxCollider2D>().enabled = false;
 		player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+		
+		if(!fisnished)
+			GameOver(player.name == "player2");
 
 		fisnished = true;
-
-		GameOver(player.name == "player2");
 
 	}
 
@@ -49,6 +56,34 @@ public class RaceControl : MonoBehaviour {
 	bool fisnished = false;
 
 	public void GameOver(bool chickenHawkingsWin) {
+		int winIndex = chickenHawkingsWin? 0 : 1;
+		int loseIndex = chickenHawkingsWin? 1 : 0;
+
+		winnerImg.SetActive(true);
+		loserImg.SetActive(true);
+		textFinish.SetActive(true);
+
+		winnerImg.GetComponent<UnityEngine.UI.Image>().sprite = winnerSprites[winIndex];
+		loserImg.GetComponent<UnityEngine.UI.Image>().sprite = loserSprites[loseIndex];
+
+		textFinish.GetComponent<UnityEngine.UI.Text>().text = 
+			(!chickenHawkingsWin? "sChicken Hawking " : "Impollator Furioso") + " lose";
+
+		StartCoroutine(RaceFinish());
+	}
+
+	IEnumerator RaceFinish() {
+		winAnimation.Play();
+		yield return new WaitForSeconds(winAnimation.clip.length + timeOut);
+
+		SceneManager.LoadSceneAsync("race");
+
+	}
+
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Escape)) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+		}
 
 	}
 
