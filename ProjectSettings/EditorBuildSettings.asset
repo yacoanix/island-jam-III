@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/race.unity
     guid: b942507634e965a47a0661b4f6a39e67
+  - enabled: 1
+    path: Assets/credits.unity
+    guid: 3b671d0053b942e4ab22e1988542bea1
+  - enabled: 1
+    path: Assets/controls.unity
+    guid: 13b519b5e62523746b43544c6ff4ee39
