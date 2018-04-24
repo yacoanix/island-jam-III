@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class vida : MonoBehaviour {
     public float vidaPollo = 100;
+    private float maxVidaPollo;
     public RectTransform ui;
     private Vector2 initialSize;
     AudioSource playerAudio;
 
+    [HideInInspector] public bool inmunity = true;
     public AudioClip[] cackles;
 
     void Awake(){
@@ -17,18 +19,20 @@ public class vida : MonoBehaviour {
 	void Start () {
 		initialSize = ui.sizeDelta;
         playerAudio = GetComponent<AudioSource>();
+        maxVidaPollo = vidaPollo;
 	}
 
 	void Update () {
-		ui.sizeDelta = new Vector2(initialSize.x * vidaPollo / 100, initialSize.y);
+		ui.sizeDelta = new Vector2(initialSize.x * vidaPollo / maxVidaPollo, initialSize.y);
 	}
 
     public void TakeDamage(float damage) {
-        if(damage == 0) 
+        if(damage == 0 || inmunity) 
             return;
             
         if(playerAudio != null && !playerAudio.isPlaying)
             PlayCackle();
+            
         vidaPollo = Mathf.Max(0, vidaPollo - damage);
 
         if(vidaPollo == 0) {

@@ -37,6 +37,7 @@ public class RaceControl : MonoBehaviour {
 	void StartPlayer(GameObject player) {
 		player.GetComponent<ChickenControl>().controlActive = true;
 		player.GetComponent<Animator>().SetBool("Running", true);
+		player.GetComponent<vida>().inmunity = false;
 	}
 
 	public void PlayerDies(GameObject player) {
@@ -44,7 +45,7 @@ public class RaceControl : MonoBehaviour {
 		player.GetComponent<ChickenControl>().controlActive = false;
 		player.GetComponent<BoxCollider2D>().enabled = false;
 		player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-		
+				
 		if(!fisnished)
 			GameOver(player.name == "player2");
 
@@ -59,12 +60,11 @@ public class RaceControl : MonoBehaviour {
 		int winIndex = chickenHawkingsWin? 0 : 1;
 		int loseIndex = chickenHawkingsWin? 1 : 0;
 
-		winnerImg.SetActive(true);
-		loserImg.SetActive(true);
-		textFinish.SetActive(true);
-
 		winnerImg.GetComponent<UnityEngine.UI.Image>().sprite = winnerSprites[winIndex];
+		winnerImg.GetComponent<UnityEngine.UI.Image>().color = Color.white;
 		loserImg.GetComponent<UnityEngine.UI.Image>().sprite = loserSprites[loseIndex];
+		loserImg.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+		loserImg.GetComponent<AudioSource>().Play();
 
 		textFinish.GetComponent<UnityEngine.UI.Text>().text = 
 			(!chickenHawkingsWin? "sChicken Hawking " : "Impollator Furioso") + " lose";
@@ -73,8 +73,10 @@ public class RaceControl : MonoBehaviour {
 	}
 
 	IEnumerator RaceFinish() {
+		//yield return null;
 		winAnimation.Play();
 		yield return new WaitForSeconds(winAnimation.clip.length + timeOut);
+		//yield return new WaitForSeconds(3 * timeOut);
 
 		SceneManager.LoadSceneAsync("race");
 
